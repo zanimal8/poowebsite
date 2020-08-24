@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
+html {
+  background-color: #0f4372;
+}
+
 #title {
   font-family:'Do Hyeon', sans-serif;
+  color: white;
 }
 
 #paragraphidk, button, h1 {
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
+}
+
+button {
+  color: black
 }
 
 h2{
