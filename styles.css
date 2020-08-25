@@ -9,9 +9,19 @@ html {
   color: white;
 }
 
-#paragraphidk, button, h1,  {
+#paragraphidk, button, h1, {
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: white;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+a:visited {
+  color: rgb(255, 255, 255);
+}
+a:hover, a:active, a:focus {
+  color: rgb(255, 255, 255);
 }
 
 button {
