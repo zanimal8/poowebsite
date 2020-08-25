@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href='styles.css'>
+</head>  
+<body>
+
+  <p>hey there. what did u think of my website?</p>
+  
+  <textarea id = "feedback" type = "text" name = "feedback">Type feedback here!</textarea>
+
+  <br>
+
+  <button onclick="nyancatbruh(); SayIDC()">Submit</button>
+  <audio id="nyancat" src="nyancatlol.mp3"></audio>
+  
+  <h2 id = "idc" class = "wrapper"></h2>
+
+  <script>
+
+  function SayIDC() {
+    document.getElementById("idc").innerHTML = "i dont care lol"
+  }
+  
+  function nyancatbruh() {
+    document.getElementById('nyancat').play()
+  }
+  
+  </script>
+
+
+</body>
+</html>
