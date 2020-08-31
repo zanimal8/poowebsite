@@ -2,19 +2,21 @@
 <html>
 <head>
   <link rel="stylesheet" href='styles.css'>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>  
 <body>
 
   <p>hey there. what did u think of my website?</p>
   
-  <textarea id = "feedback" type = "text" name = "feedback">Type feedback here!</textarea>
+  <textarea id = "feedback" type = "text" name = "feedback" placeholder = "Write feedback here!"></textarea>
 
   <br>
 
-  <button onclick="nyancatbruh(); SayIDC()">Submit</button>
+  <button onclick="nyancatbruh(); SayIDC(); collectSubmission(); SayTahnks()">Submit</button>
   <audio id="nyancat" src="nyancatlol.mp3"></audio>
   
   <h2 id = "idc" class = "wrapper"></h2>
+  <h5 id = "thanks" class = "wrapper"></h5>
 
   <a href = "https://omah.ga">Back to Home</a>
 
@@ -24,10 +26,28 @@
     document.getElementById("idc").innerHTML = "i dont care lol"
   }
   
+    function SayTahnks() {
+    document.getElementById("thanks").innerHTML = "thanks for feedback though, i do care a little bit"
+  }
+  
   function nyancatbruh() {
     document.getElementById('nyancat').play()
   }
   
+   function collectSubmission() {
+     let feedback = document.getElementById('feedback').value;
+     
+     Email.send({
+      SecureToken: "67582983-f16f-4ea7-8a9c-6f77201ca60e",
+      To : "isaiahsip6@gmail.com",
+      From : "omahgarwsh@gmail.com",
+      Subject : `New form submission | ${Date.now().toString()}`,
+      Body : `New feedback submission:\n\n${feedback}`
+    }).then(
+      message => alert("Thanks!")
+    );
+   }
+
   </script>
 
 

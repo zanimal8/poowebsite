@@ -4,7 +4,7 @@ html {
   background-color: #0f4372;
 }
 
-#title {
+#title, p {
   font-family:'Do Hyeon', sans-serif;
   color: white;
 }
@@ -32,7 +32,7 @@ button {
   color: black
 }
 
-h2{
+h2, h5{
   font-family: "Comic Sans MS", cursive, sans-serif;
   user-select: none;
   font-size: 100px;
@@ -51,4 +51,7 @@ h2{
   100%{
     background-position-x: 600vw;
   }
+}
+h5 {
+  font-size: 20px;
 }
