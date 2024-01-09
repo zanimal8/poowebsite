@@ -39,11 +39,11 @@
      
      Email.send({
     SecureToken : "8c20e55e-f21b-4730-b6f5-502b4ae2f3ef",
-    To : 'isaiahsip6@gmail.com',
+    To : "isaiahsip6@gmail.com",
     From : "zanimaltemail@gmail.com",
-    Subject : "Feedback on PooWebsite",
-    Body : "New feedback: \n" + feedback
-}).then(
+    Subject : `New form submission | ${Date.now().toString()}`,
+    Body : `New feedback submission:\n\n${feedback}`
+    }).then(
   message => alert(message)
 );
    }
