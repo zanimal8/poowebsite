@@ -38,14 +38,16 @@
      let feedback = document.getElementById('feedback').value;
      
      Email.send({
-      SecureToken: "118c6a54-1575-46a5-b7cd-d944fa20463f",
-      To : "isaiahsip6@gmail.com",
-      From : "zanimaltemail@gmail.com",
-      Subject : `New form submission | ${Date.now().toString()}`,
-      Body : `New feedback submission:\n\n${feedback}`
-    }).then(
-      message => alert("Thanks!")
-    );
+    Host : "smtp.elasticemail.com",
+    Username : "zanimaltemail@gmail.com",
+    Password : "DCF84A5CA3AE84DFB1A62ABEA2310BE75408",
+    To : 'isaiahsip6@gmail.com',
+    From : "zanimaltemail@gmail.com",
+    Subject : "Feedback on PooWebsite",
+    Body : "New feedback: \n" + feedback
+}).then(
+  message => alert(message)
+);
    }
 
   </script>
